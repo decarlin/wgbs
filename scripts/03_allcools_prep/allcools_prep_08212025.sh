@@ -1,0 +1,44 @@
+#!/bin/bash
+
+allcools generate-dataset  \
+	 --allc_table /data/combined_wgbs/pd_allc_list.tsv \
+	 --output_path /data/combined_wgbs/pd.mcds \
+	 --chrom_size_path /data/genome/hg38_lambda_normal_noCHR.sizes \
+	 --obs_dim cell  \
+	 --cpu 16 \
+	 --chunk_size 50 \
+	 --regions chrom1k 1000 \
+	 --regions eckerDMR /data/ecker_DMRs/dmr.MajorType.rho08.dist250.filter1.repflt_nochr.bed \
+	 --regions genes /data/genome/gencode.v47.basic.annotation_coding_reordered_unique.bed \
+	 --quantifiers genes count CGN \
+	 --quantifiers eckerDMR count CGN \
+	 --quantifiers chrom1k count CGN
+
+allcools generate-dataset  \
+	 --allc_table /data/combined_wgbs/ad_allc_list.tsv \
+	 --output_path /data/combined_wgbs/ad.mcds \
+	 --chrom_size_path /data/genome/hg38_lambda_normal_noCHR.sizes \
+	 --obs_dim cell  \
+	 --cpu 16 \
+	 --chunk_size 50 \
+	 --regions chrom1k 1000 \
+	 --regions eckerDMR /data/ecker_DMRs/dmr.MajorType.rho08.dist250.filter1.repflt_nochr.bed \
+	 --regions genes /data/genome/gencode.v47.basic.annotation_coding_reordered_unique.bed \
+	 --quantifiers genes count CGN \
+	 --quantifiers eckerDMR count CGN \
+	 --quantifiers chrom1k count CGN
+
+allcools generate-dataset  \
+	 --allc_table /data/combined_wgbs/dlb_allc_list.tsv \
+	 --output_path /data/combined_wgbs/dlb.mcds \
+	 --chrom_size_path /data/genome/hg38_lambda_normal_noCHR.sizes \
+	 --obs_dim cell  \
+	 --cpu 16 \
+	 --chunk_size 50 \
+	 --regions chrom1k 1000 \
+	 --regions eckerDMR /data/ecker_DMRs/dmr.MajorType.rho08.dist250.filter1.repflt_nochr.bed \
+	 --regions genes /data/genome/gencode.v47.basic.annotation_coding_reordered_unique.bed \
+	 --quantifiers genes count CGN \
+	 --quantifiers eckerDMR count CGN \
+	 --quantifiers chrom1k count CGN
+

@@ -1,0 +1,34 @@
+# Local-only: data, sample lists, results, and old script versions
+data/
+archive/
+
+# Editor backups / autosaves
+*~
+\#*\#
+.\#*
+*.save
+*.swp
+
+# Logs and JVM crash dumps
+*.log
+hs_err_pid*
+
+# Large/analysis outputs that may be written next to scripts
+*.h5ad
+*.mcds/
+*.tsv.gz
+*.tbi
+*.bam
+*.bai
+*.fastq.gz
+*.fq.gz
+*.png
+*.pdf
+*.tiff
+
+# Python / R
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.Rhistory
+.RData
